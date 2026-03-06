@@ -15,8 +15,12 @@
 </script>
 
 <section>
-	<p class="domain">philipandersson.dev</p>
-	<p class="status">coming soon{#each dots as i (i)}<span in:fade={{ duration: 400 }} out:fade={{ duration: 200 }}>.</span>{/each}</p>
+	<p class="domain">https://philipandersson.dev</p>
+	<p class="status">
+		coming soon{#each dots as i (i)}<span in:fade={{ duration: 400 }} out:fade={{ duration: 200 }}
+				>.</span
+			>{/each}
+	</p>
 </section>
 
 <style>
