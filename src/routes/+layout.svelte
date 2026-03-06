@@ -1,7 +1,9 @@
 <script lang="ts">
+	import { page } from '$app/state';
 	const { children } = $props();
 </script>
 
+{#if page.url.pathname !== '/'}
 <header>
 	<h1>
 		<a class="logo" href="/">Philip Andersson</a>
@@ -11,6 +13,7 @@
 		<a href="/writings" data-sveltekit-preload-data="hover">Writings</a>
 	</nav>
 </header>
+{/if}
 
 <main>
 	{@render children()}
