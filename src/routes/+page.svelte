@@ -1,62 +1,31 @@
 <script>
-	import { fade } from 'svelte/transition';
-	import { onMount } from 'svelte';
-
-	let dotCount = $state(0);
-
-	onMount(() => {
-		const interval = setInterval(() => {
-			dotCount = dotCount >= 3 ? 0 : dotCount + 1;
-		}, 600);
-		return () => clearInterval(interval);
-	});
-
-	let dots = $derived(Array.from({ length: dotCount }, (_, i) => i));
 </script>
 
-<section>
-	<p class="domain">https://philipandersson.dev</p>
-	<p class="status">
-		coming soon{#each dots as i (i)}<span in:fade={{ duration: 400 }} out:fade={{ duration: 200 }}
-				>.</span
-			>{/each}
-	</p>
+<section id="hero">
+	<h1 class="name">
+		<span class="first-name">Philip</span> <span class="last-name">Andersson</span>
+	</h1>
+	<h2 class="title">Junior Frontend Developer</h2>
 </section>
 
 <style>
-	:global(body) {
-		margin: 0;
-		background: #000;
-	}
-
-	:global(main) {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		height: 100vh;
-	}
-
-	section {
+	#hero {
 		display: flex;
 		flex-direction: column;
-		align-items: center;
-		font-family: 'Courier New', Courier, monospace;
-		color: #00ff41;
+		margin: 0 auto;
+		padding: 0 5em 0 5em;
+	}
+	.name {
+		font-size: 8vw;
+		font-weight: bolder;
+		text-align: center;
+	}
+	.last-name {
+		text-transform: uppercase;
 	}
 
-	.domain {
-		font-size: 2.5rem;
-		margin: 0 0 0.5rem 0;
-		letter-spacing: 0.05em;
-	}
-
-	.status {
-		font-size: 1.2rem;
-		margin: 0;
-		letter-spacing: 0.1em;
-	}
-
-	span {
-		display: inline-block;
+	.title {
+		font-size: 2rem;
+		text-align: center;
 	}
 </style>
