@@ -19,6 +19,10 @@
 </main>
 
 <style>
+	:global(*) {
+		margin: 0;
+		padding: 0;
+	}
 	:global(body) {
 		font-family: 'Inconsolata', monospace;
 	}
@@ -30,7 +34,10 @@
 	}
 
 	nav {
+		margin-top: 3rem;
 		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
 		gap: 1rem;
 	}
 	a {
