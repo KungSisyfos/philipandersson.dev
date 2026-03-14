@@ -10,6 +10,33 @@
 	</div>
 </section>
 
+<section id="hero">
+	<div class="background-image">
+		<h1 class="name">
+			<span class="first-name">Philip</span> <span class="last-name">Andersson</span>
+		</h1>
+		<h2 class="title">Junior Frontend Developer</h2>
+	</div>
+</section>
+
+<section id="hero">
+	<div class="background-image">
+		<h1 class="name">
+			<span class="first-name">Philip</span> <span class="last-name">Andersson</span>
+		</h1>
+		<h2 class="title">Junior Frontend Developer</h2>
+	</div>
+</section>
+
+<section id="hero">
+	<div class="background-image">
+		<h1 class="name">
+			<span class="first-name">Philip</span> <span class="last-name">Andersson</span>
+		</h1>
+		<h2 class="title">Junior Frontend Developer</h2>
+	</div>
+</section>
+
 <style>
 	#hero {
 		display: flex;
@@ -23,7 +50,7 @@
 		background-image: url('/hero-wide.JPG');
 		background-size: cover;
 		background-position: center;
-		width: 100vw;
+		width: 80vw;
 		height: 60vh;
 		margin: 0 auto;
 	}
@@ -55,7 +82,6 @@
 	@media (min-width: 480px) {
 		.background-image {
 			margin: 3em auto;
-			width: 80vw;
 			height: 70vh;
 		}
 		.name {

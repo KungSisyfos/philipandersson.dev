@@ -2,12 +2,11 @@
 	const { children } = $props();
 </script>
 
+<a class="logo" href="/">
+	<span class="first-name">Philip</span><span class="last-name">Andersson</span>
+</a>
+
 <header>
-	<h1>
-		<a class="logo" href="/">
-			<span class="first-name">Philip</span><span class="last-name">Andersson</span>
-		</a>
-	</h1>
 	<nav>
 		<a href="/portfolio" data-sveltekit-preload-data="hover">Web Developer</a>
 		<a href="/writings" data-sveltekit-preload-data="hover">Writings</a>
@@ -28,14 +27,14 @@
 	}
 	header {
 		display: flex;
-		justify-content: space-between;
+		justify-content: flex-end;
 		align-items: center;
 		padding: 1rem;
 	}
 
 	nav {
-		margin-top: 3rem;
 		display: flex;
+		margin-top: 3rem;
 		flex-direction: column;
 		align-items: flex-end;
 		gap: 1rem;
@@ -45,12 +44,14 @@
 		text-decoration: none;
 	}
 	a:hover {
-		color: #007bff;
+		text-decoration: underline;
 	}
 	.logo {
-		position: sticky;
+		position: fixed;
+		top: 1rem;
+		left: 1rem;
 		display: flex;
-		align-items: flext-start;
+		align-items: flex-start;
 		font-size: 1.5rem;
 		font-weight: bold;
 		text-decoration: none;
@@ -58,6 +59,7 @@
 	}
 	.logo:hover {
 		color: #007bff;
+		text-decoration: none;
 	}
 	.first-name {
 		font-weight: bold;
