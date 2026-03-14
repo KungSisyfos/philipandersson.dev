@@ -61,6 +61,6 @@
 	.last-name {
 		text-transform: uppercase;
 		letter-spacing: 0.25em;
-		margin-left: 0.5em;
+		margin-left: 0.75em;
 	}
 </style>
