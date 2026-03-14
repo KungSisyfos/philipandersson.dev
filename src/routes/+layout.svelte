@@ -1,4 +1,5 @@
 <script lang="ts">
+	import '../app.css';
 	const { children } = $props();
 </script>
 
@@ -18,13 +19,6 @@
 </main>
 
 <style>
-	:global(*) {
-		margin: 0;
-		padding: 0;
-	}
-	:global(body) {
-		font-family: 'Inconsolata', monospace;
-	}
 	header {
 		display: flex;
 		justify-content: flex-end;
@@ -58,7 +52,7 @@
 		color: #333;
 	}
 	.logo:hover {
-		color: #007bff;
+		color: var(--accent-color);
 		text-decoration: none;
 	}
 	.first-name {
