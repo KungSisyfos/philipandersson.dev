@@ -111,7 +111,7 @@
 	}
 	#projects {
 		width: 80vw;
-		margin: 0 auto;
+		margin: 4rem auto 0;
 	}
 	.projects-title {
 		margin: 0 auto;
