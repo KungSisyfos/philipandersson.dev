@@ -57,5 +57,8 @@
 	},
 	"keywords": [
 		"svelte"
-	]
+	],
+	"dependencies": {
+		"@lucide/svelte": "^1.0.0-rc.0"
+	}
 }
