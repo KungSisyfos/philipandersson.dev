@@ -59,6 +59,6 @@
 		"svelte"
 	],
 	"dependencies": {
-		"lucide-svelte": "^0.577.0"
+		"@lucide/svelte": "^1.0.0-rc.0"
 	}
 }
