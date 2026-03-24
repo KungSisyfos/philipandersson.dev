@@ -18,24 +18,30 @@
 </section>
 
 <section id="projects">
-	<h2 class="projects-title"><span>Projects</span> / work</h2>
+	<h2 class="projects-title"><span class="project-title-span">Projects</span></h2>
 	<ProjectCard
 		image="/book-binder-logo.png"
 		title="Book Binder."
-		description="A social book cataloging web application designed to help readers organize their personal libraries, discover new books, and connect with fellow book lovers. This is my after hours hobby project. The inspiration for this project is community-driven book sharing."
-		link="https://github.com/KungSisyfos/bookbinder"
+		description="A social book cataloging web application designed to help readers organize their personal libraries, discover new books, and connect with fellow book lovers."
+		stack={['Sveltekit', 'Svelte 5', 'Tailwind CSS', 'TypeScript', 'Vite']}
+		repoLink="https://github.com/KungSisyfos/bookbinder"
 	/>
 	<ProjectCard
 		image="/coolstuff.png"
 		title="Coolstuff"
-		description="My second internship for Mediainstitutet at the company Coolstuff"
-		link="https://www.coolstuff.se"
+		description="Coolstuff is an e-commerce company that specializes in different and fun gadgets
+		and gifts. I have fixed UI bugs, done jest testing and created a tooling script that
+		helps complete, incomplete category trees."
+		stack={['Svelte', 'TypeScript', 'Node.js', 'Jest']}
+		siteLink="https://www.coolstuff.se"
 	/>
 	<ProjectCard
 		image="/matsedelnLogo.png"
 		title="Matsedeln"
 		description="For my final project at Mediainstitutet I drew on my experienes as a former cook at a preschool, and the annoyance of creating a meal plan that was varied enough and interesting enough to make the kids happy, as well as not making me and my colleague crawl up the walls. So I created Matsedeln, a meal planning web page that creates a meal plan without repetition."
-		link="https://matsedeln.vercel.app/"
+		stack={['React 19', 'TypeScript', 'Tailwind CSS', 'Supabase', 'Tanstack Router']}
+		siteLink="https://matsedeln.vercel.app/"
+		repoLink="https://github.com/KungSisyfos/matsedeln"
 	/>
 </section>
 
@@ -114,12 +120,21 @@
 		margin: 4rem auto 0;
 	}
 	.projects-title {
+		display: flex;
+		align-items: center;
+		justify-content: center;
 		margin: 0 auto;
+		height: 100vh;
 		text-align: center;
 		text-transform: uppercase;
-		text-decoration: underline;
 		letter-spacing: 0.25rem;
+		font-size: 4rem;
 	}
+	.project-title-span {
+		border-bottom: 1px solid #000;
+		border-top: 1px solid #000;
+	}
+
 	.background-image {
 		display: flex;
 		flex-direction: column;
@@ -186,23 +201,10 @@
 	.links a {
 		color: #fff;
 	}
-	.links a {
-		color: #fff;
-	}
 
 	@media (min-width: 480px) {
 		:global(.project-card:nth-of-type(even)) {
 			margin: 0 auto;
-			flex-direction: row-reverse;
-		}
-		:global(.project-card:nth-of-type(even) .project-image) {
-			justify-content: flex-start;
-		}
-
-	@media (min-width: 480px) {
-		:global(.project-card:nth-of-type(even)) {
-			margin-left: auto;
-			margin-right: 0;
 			flex-direction: row-reverse;
 		}
 		:global(.project-card:nth-of-type(even) .project-image) {
@@ -233,7 +235,7 @@
 			width: 100vw;
 		}
 		.projects-title {
-			font-size: 3.5rem;
+			font-size: 5rem;
 		}
 	}
 </style>
