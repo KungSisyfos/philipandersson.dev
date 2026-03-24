@@ -186,6 +186,18 @@
 	.links a {
 		color: #fff;
 	}
+	.links a {
+		color: #fff;
+	}
+
+	@media (min-width: 480px) {
+		:global(.project-card:nth-of-type(even)) {
+			margin: 0 auto;
+			flex-direction: row-reverse;
+		}
+		:global(.project-card:nth-of-type(even) .project-image) {
+			justify-content: flex-start;
+		}
 
 	@media (min-width: 480px) {
 		:global(.project-card:nth-of-type(even)) {
