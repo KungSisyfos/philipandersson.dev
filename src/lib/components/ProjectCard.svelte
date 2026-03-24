@@ -1,5 +1,5 @@
 <script>
-	const { image, title, description, siteLink = null, repoLink = null, stack } = $props();
+	const { image, title, description, link } = $props();
 </script>
 
 <div class="project-card">
@@ -9,21 +9,7 @@
 	<div class="project-info">
 		<h3>{title}</h3>
 		<p>{description}</p>
-
-		<ul>
-			{#each stack as item, index (item)}
-				{#if index > 0}&middot;{/if}
-				<li>{item}</li>
-			{/each}
-		</ul>
-		<div class="links">
-			{#if siteLink}
-				<a href={siteLink} target="_blank">View Site</a>
-			{/if}
-			{#if repoLink}
-				<a href={repoLink} target="_blank">View Repository</a>
-			{/if}
-		</div>
+		<a href={link} target="_blank">View Project</a>
 	</div>
 </div>
 
@@ -33,7 +19,7 @@
 		flex-direction: column;
 		padding: 1rem;
 		margin: 2rem auto 5rem;
-		min-height: 80vh;
+		height: 100vh;
 	}
 	.project-info {
 		display: flex;
@@ -46,24 +32,12 @@
 		font-weight: 900;
 		text-align: center;
 	}
+
 	.project-info > p {
 		border-top: 1px solid var(--accent-color);
 		border-bottom: 1px solid var(--accent-color);
 		padding: 0.5rem;
 		text-align: center;
-	}
-
-	.project-info > ul {
-		list-style: none;
-		padding: 0;
-		margin: 0;
-		display: flex;
-		flex-wrap: wrap;
-		gap: 0.5rem;
-		align-items: center;
-		justify-content: center;
-		color: #333;
-		font-weight: 500;
 	}
 	.project-image {
 		display: flex;
@@ -72,12 +46,7 @@
 		width: 100%;
 		margin: 0 auto;
 	}
-	.links {
-		display: flex;
-		gap: 1rem;
-		justify-content: center;
-		margin-top: 1rem;
-	}
+
 	img {
 		width: 80%;
 		object-fit: cover;
@@ -94,8 +63,8 @@
 			justify-content: center;
 			flex-direction: row;
 			width: 80vw;
-			margin: 0 auto;
-			height: 100vh;
+			margin-left: 0;
+			margin-right: auto;
 		}
 
 		.project-image {
